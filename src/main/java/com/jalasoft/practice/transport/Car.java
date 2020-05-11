@@ -1,4 +1,29 @@
+/*
+ *
+ *  Copyright (c) 2020 Jalasoft.
+ *
+ *  This software is the confidential and proprietary information of Jalasoft.
+ *  ("Confidential Information"). You shall not disclose such Confidential
+ *  Information and shall use it only in accordance with the terms of the
+ *  license agreement you entered into with Jalasoft.
+ * /
+ */
+
 package com.jalasoft.practice.transport;
 
-public class Car {
+public class Car extends Land {
+
+    boolean useGas;
+
+    public Car(String name, int price, boolean hasMotor, boolean useGas) {
+
+        super(name, price, hasMotor);
+        this.useGas = useGas;
+    }
+
+    @Override
+    public String displayData() {
+
+        return super.displayData()+ ", useGas =" + useGas;
+    }
 }
